@@ -108,9 +108,11 @@ function displayBooks(books) {
     const booksContainer = document.querySelector('.books');
 
     books.forEach((book) => {
-        const tags = book.genres.forEach((genre) => {
+        console.log(book.genres);
+        const tags = book.genres.map((genre) => {
             return `<div class="book-tag">${genre}</div>`;
         });
+
 
         const chars = {
             ',': '',
@@ -146,12 +148,12 @@ function displayBooks(books) {
                 </h2>
                 <h3 class="book-author">di ${book.author}</h3>
                 <div class="book-tags">
-                    ${tags}
+                    ${tags.join(' ')}
                 </div>
                 <div class="book-rating">
                     ${ratingString}
                 </div>
-                <p class="book-reading-time">Tempo di lettura: ${book.pages / 30}</p>
+                <p class="book-reading-time">Tempo di lettura: ${book.pages} ore</p>
             </div>
         `;
     })
