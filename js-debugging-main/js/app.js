@@ -153,7 +153,7 @@ function displayBooks(books) {
                 <div class="book-rating">
                     ${ratingString}
                 </div>
-                <p class="book-reading-time">Tempo di lettura: ${book.pages} ore</p>
+                <p class="book-reading-time">Tempo di lettura: ${Math.round(book.pages / 30)} ore</p>
             </div>
         `;
     })
