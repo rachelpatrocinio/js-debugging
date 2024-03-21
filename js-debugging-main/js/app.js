@@ -124,13 +124,15 @@ function displayBooks(books) {
 
         let ratingString = '';
         const rating = book.rating / 2;
+        let halfStar = 0;
         for (let i = 1; i <= rating; i++) {
             ratingString += '<img src="icons/star.png">';
         }
         if (rating - parseInt(rating) > 0.5) {
             ratingString += '<img src="icons/half-star.png">';
+            halfStar++;
         }
-        for (let i = rating; i <= 4; i++) {
+        for (let i = parseInt(rating)+halfStar; i <= 4; i++) {
             ratingString += '<img src="icons/star-empty.png">';
         }
 
