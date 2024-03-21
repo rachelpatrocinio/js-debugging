@@ -116,7 +116,8 @@ function displayBooks(books) {
             ',': '',
             '.': '',
             ' ': '',
-            '"': ''
+            '"': '',
+            "'": '',
         }
 
         let ratingString = '';

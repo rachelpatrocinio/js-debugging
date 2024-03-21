@@ -3,6 +3,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+img{
+    max-width: 100%;
+}
 
 body {
     font-family: 'Merriweather', serif;
@@ -109,4 +112,18 @@ body {
 .book .book-rating img {
     width: 25px;
     margin-right: 10px;
+}
+
+
+/* Add Media Query */
+@media screen and (max-width: 1318px){
+    .books{
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .book{
+        width: 100%;
+    }
 }
